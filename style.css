@@ -1,0 +1,182 @@
+/* 基本設定 */
+body {
+    font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+    line-height: 1.8;
+    color: #333;
+    margin: 0;
+    background-color: #fdfaf6;
+}
+
+a {
+    text-decoration: none;
+    color: #8a6d46;
+}
+
+a:hover {
+    color: #614d32;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ヘッダー */
+header {
+    background-color: #fff;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #614d32;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+/* メインコンテンツ */
+main {
+    padding: 40px 0;
+}
+
+section {
+    padding: 60px 0;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #614d32;
+}
+
+/* ヒーローセクション */
+#hero {
+    background-image: url('https://images.unsplash.com/photo-1554118811-1e0d58224f24'); /* よりおしゃれなカフェの画像に変更 */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 120px 0;
+}
+
+#hero h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+#hero p {
+    font-size: 20px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+/* メニューセクション */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+.menu-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    overflow: hidden; /* 画像の角を丸めるため */
+    text-align: center; /* テキストを中央揃え */
+}
+
+.menu-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* 画像の比率を保ったままトリミング */
+}
+
+.menu-item h3 {
+    margin: 20px 0 10px;
+    border-bottom: 2px solid #8a6d46;
+    padding-bottom: 10px;
+    display: inline-block; /* 下線を文字幅に合わせる */
+    color: #614d32;
+}
+
+.menu-item ul {
+    list-style: none;
+    padding: 0 20px 20px;
+}
+
+.menu-item li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.menu-item span {
+    font-weight: bold;
+    color: #8a6d46;
+}
+
+/* コンタクトセクション */
+#contact {
+    text-align: center;
+}
+
+.map {
+    margin-top: 40px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* フッター */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+
+    header h1 {
+        margin-bottom: 10px;
+    }
+
+    header nav ul li {
+        margin: 0 10px;
+    }
+
+    #hero h2 {
+        font-size: 36px;
+    }
+
+    #hero p {
+        font-size: 18px;
+    }
+}
